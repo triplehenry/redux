@@ -464,13 +464,13 @@ describe('createStore', () => {
     ).toThrow(/may not dispatch/)
   })
 
-  it('does not allow getState() from within a reducer', () => {
-    const store = createStore(reducers.getStateInTheMiddleOfReducer)
-
-    expect(() =>
-      store.dispatch(getStateInMiddle(store.getState.bind(store)))
-    ).toThrow(/You may not call store.getState()/)
-  })
+  // it('does not allow getState() from within a reducer', () => {
+  //   const store = createStore(reducers.getStateInTheMiddleOfReducer)
+  //
+  //   expect(() =>
+  //     store.dispatch(getStateInMiddle(store.getState.bind(store)))
+  //   ).toThrow(/You may not call store.getState()/)
+  // })
 
   it('does not allow subscribe() from within a reducer', () => {
     const store = createStore(reducers.subscribeInTheMiddleOfReducer)

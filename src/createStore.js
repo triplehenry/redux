@@ -75,13 +75,13 @@ export default function createStore(reducer, preloadedState, enhancer) {
    * @returns {any} The current state tree of your application.
    */
   function getState() {
-    if (isDispatching) {
-      throw new Error(
-        'You may not call store.getState() while the reducer is executing. ' +
-          'The reducer has already received the state as an argument. ' +
-          'Pass it down from the top reducer instead of reading it from the store.'
-      )
-    }
+    // if (isDispatching) {
+    //   throw new Error(
+    //     'You may not call store.getState() while the reducer is executing. ' +
+    //       'The reducer has already received the state as an argument. ' +
+    //       'Pass it down from the top reducer instead of reading it from the store.'
+    //   )
+    // }
 
     return currentState
   }
